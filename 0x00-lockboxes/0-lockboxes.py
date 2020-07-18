@@ -8,6 +8,7 @@ def canUnlockAll(boxes):
 
     while (changed):
         changed = False
+
         for i in range(len(boxes)):
             if (not unlocked[i]):
                 continue
@@ -20,5 +21,5 @@ def canUnlockAll(boxes):
                 if (not unlocked[key]):
                     unlocked[key] = True
                     changed = True
-    
+
     return all(unlocked)
