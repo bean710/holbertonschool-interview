@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def canUnlockAll(boxes):
     unlocked = [False] * len(boxes)
     unlocked[0] = True
