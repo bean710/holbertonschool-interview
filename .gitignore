@@ -1,3 +1,9 @@
+*
+!/**/
+!*.*
+
+*/settings.json
+
 *-main.py
 */.vscode/*
 *.pyc
