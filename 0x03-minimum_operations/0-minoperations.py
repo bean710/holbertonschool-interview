@@ -15,5 +15,3 @@ def minoperations(n):
             i += 1
 
     return total + onnum
-
-print(minoperations(9))
