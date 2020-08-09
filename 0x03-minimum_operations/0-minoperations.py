@@ -5,7 +5,7 @@ using only copy and paste functions
 """
 
 
-def minoperations(n):
+def minOperations(n):
     """Returns the sum of the prime factors of `n`"""
     if (n <= 1):
         return 0
