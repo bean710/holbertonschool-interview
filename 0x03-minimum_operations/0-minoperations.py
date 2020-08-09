@@ -3,7 +3,7 @@
 def minoperations(n):
     if (n <= 1):
         return 0
-    
+
     onnum = n
     i = 2
     total = 0
