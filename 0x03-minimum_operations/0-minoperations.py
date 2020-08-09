@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Calculates the minimum number of operations for getting `n` characters
+using only copy and paste functions
+"""
 
 
 def minoperations(n):
