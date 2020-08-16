@@ -90,7 +90,7 @@ void add_grids(int grid1[3][3], int grid2[3][3])
 void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 {
 	int i, j;
-	int mask[3][3] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	int mask[3][3] = { {0, 0, 0}, {0, 0, 0}, {0, 0, 0} };
 
 	add_grids(grid1, grid2);
 
