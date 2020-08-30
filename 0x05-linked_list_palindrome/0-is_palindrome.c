@@ -31,8 +31,6 @@ int is_palindrome(listint_t **head)
 	fhalf = on;
 	shalf = next;
 	tmp = shalf;
-	if (len % 2)
-		tmp = tmp->next;
 
 	while (on && tmp)
 	{
