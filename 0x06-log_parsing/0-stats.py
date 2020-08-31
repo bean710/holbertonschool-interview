@@ -25,11 +25,14 @@ if __name__ == "__main__":
                 "^[\d\.]+ - \[.+\] \"GET /\w+/260 HTTP/1\.1\\\" (\d+) (\d+)",
                 line)
 
-            fSize += int(matches.group(2))
-            if (matches.group(1) in errCodes):
-                errCodes[matches.group(1)] += 1
-            else:
-                errCodes[matches.group(1)] = 1
+            try:
+                fSize += int(matches.group(2))
+                if (matches.group(1) in errCodes):
+                    errCodes[matches.group(1)] += 1
+                else:
+                    errCodes[matches.group(1)] = 1
+            except:
+                pass
 
             it += 1
 
@@ -39,5 +42,6 @@ if __name__ == "__main__":
 
     except KeyboardInterrupt:
         print_logs()
+        raise
 
     print_logs()
