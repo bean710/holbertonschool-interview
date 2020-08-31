@@ -23,7 +23,7 @@ try:
 
         it += 1
 
-        if (it == 5):
+        if (it == 10):
             it = 0
             print("File size: {}".format(fSize))
 
