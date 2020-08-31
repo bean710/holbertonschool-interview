@@ -12,7 +12,7 @@ errCodes = {}
 try:
     for line in sys.stdin:
         matches = re.match(
-            r"^[\d\.]+ - \[.+\] \"GET /projects/260 HTTP/1\.1\\\" (\d+) (\d+)",
+            "^[\d\.]+ - \[.+\] \"GET /projects/260 HTTP/1\.1\\\" (\d+) (\d+)",
             line)
 
         fSize += int(matches.group(2))
