@@ -3,6 +3,15 @@
 import sys
 import re
 
+
+def print_logs():
+    print("File size: {}".format(fSize))
+
+    for code in codeSet:
+        if (code in errCodes):
+            print("{}: {}".format(code, errCodes[code]))
+
+
 if __name__ == "__main__":
     codeSet = ("200", "301", "400", "401", "403", "404", "405", "500")
 
@@ -26,16 +35,9 @@ if __name__ == "__main__":
 
             if (it == 10):
                 it = 0
-                print("File size: {}".format(fSize))
-
-                for code in codeSet:
-                    if (code in errCodes):
-                        print("{}: {}".format(code, errCodes[code]))
+                print_logs()
 
     except KeyboardInterrupt:
+        print_logs()
 
-        print("File size: {}".format(fSize))
-
-        for code in codeSet:
-            if (code in errCodes):
-                print("{}: {}".format(code, errCodes[code]))
+    print_logs()
