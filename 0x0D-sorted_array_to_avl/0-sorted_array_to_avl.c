@@ -14,6 +14,9 @@ avl_t *sorted_array_to_avl(int *array, size_t size)
 	avl_t *head;
 	char err = 0;
 
+	if (!array || !size)
+		return (NULL);
+
 	head = malloc(sizeof(avl_t));
 
 	if (!head)
