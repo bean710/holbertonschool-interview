@@ -14,6 +14,9 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 {
 	skiplist_t *on = list, *search = list;
 
+	if (!list)
+		return (NULL);
+
 	while (search && search->express != NULL && search->n <= value)
 	{
 		on = search;
