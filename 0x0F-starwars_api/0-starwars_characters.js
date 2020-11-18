@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 const requestOld = require('request');
 const util = require('util');
 
