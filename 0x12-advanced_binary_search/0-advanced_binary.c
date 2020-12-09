@@ -64,7 +64,7 @@ int advanced_binary(int *arr, size_t size, int val)
 {
 	size_t start = 0, end = size - 1;
 
-	if (!arr)
+	if (!arr || size == 0)
 		return (-1);
 
 	if (size == 1)
