@@ -66,6 +66,9 @@ int advanced_binary(int *arr, size_t size, int val)
 
 	if (!arr)
 		return (-1);
+	
+	if (size == 1)
+		return (*arr == val ? 0 : -1);
 
 	return (binary_recurse(arr, start, end, val));
 }
