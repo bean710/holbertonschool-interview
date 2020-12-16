@@ -31,7 +31,7 @@ def count_words(subreddit, word_list, last="", words={}):
                 if v not in ndict:
                     ndict[v] = [k]
                 else:
-                    ndict[v].append(k);
+                    ndict[v].append(k)
 
             for k in ndict.keys():
                 ndict[k] = sorted(ndict[k])
