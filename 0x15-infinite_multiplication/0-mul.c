@@ -97,7 +97,7 @@ uint len(char *n)
  **/
 void _print(char *s)
 {
-	while (*(s+1) == '0')
+	while (*(s + 1) == '0')
 		s++;
 
 	if (*s == '0' && *(s + 1) != '\0')
