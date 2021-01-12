@@ -8,6 +8,6 @@ int _putchar(char);
 char char_mul(char a, char b, uint *carry);
 uint len(char *n);
 void _print(char *s);
-void fail();
+void fail(void);
 
 #endif

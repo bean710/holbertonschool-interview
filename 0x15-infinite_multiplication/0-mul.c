@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
 		*reson = (char)(carry + '0');
 		fresh = 0;
 	}
-	_print((*reson == '0' ? reson + 1 : reson));
+	_print(reson);
 	free(result);
 	return (0);
 }
@@ -97,6 +97,12 @@ uint len(char *n)
  **/
 void _print(char *s)
 {
+	while (*(s+1) == '0')
+		s++;
+
+	if (*s == '0' && *(s + 1) != '\0')
+		s++;
+
 	while (*s)
 		_putchar(*s++);
 
@@ -106,7 +112,7 @@ void _print(char *s)
 /**
  * fail - Prints an error message and exits
  */
-void fail()
+void fail(void)
 {
 	_print("Error");
 	exit(98);
