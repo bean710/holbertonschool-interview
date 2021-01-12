@@ -103,6 +103,9 @@ void _print(char *s)
 	_putchar('\n');
 }
 
+/**
+ * fail - Prints an error message and exits
+ */
 void fail()
 {
 	_print("Error");
