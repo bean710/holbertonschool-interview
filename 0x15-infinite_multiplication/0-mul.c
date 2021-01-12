@@ -17,10 +17,7 @@ int main(int argc, char *argv[])
 	char cur_res, fresh = 1;
 
 	if (argc != 3)
-	{
-		_print("Error");
-		exit(98);
-	}
+		fail();
 
 	num1 = argv[1];
 	num2 = argv[2];
@@ -64,6 +61,9 @@ char char_mul(char a, char b, uint *carry)
 {
 	uint ua, ub, val;
 
+	if (!(a >= '0' && a <= '9') || !(b >= '0' && b <= '9'))
+		fail();
+
 	ua = (uint)(a - '0');
 	ub = (uint)(b - '0');
 
@@ -101,4 +101,10 @@ void _print(char *s)
 		_putchar(*s++);
 
 	_putchar('\n');
+}
+
+void fail()
+{
+	_print("Error");
+	exit(98);
 }
