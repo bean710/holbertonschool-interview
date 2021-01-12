@@ -91,7 +91,7 @@ uint len(char *n)
 }
 
 /**
- * _print - Prints a string
+ * _print - Prints a string (excluding leading 0s)
  *
  * @s: Pointer to the first character of the string
  **/
