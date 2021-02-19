@@ -12,13 +12,14 @@
 void merge_sort(int *array, size_t size)
 {
 	int *temp;
+	size_t i;
 
 	if (!array || size <= 1)
 		return;
 
 	temp = malloc(sizeof(int) * size);
 
-	for (size_t i = 0; i < size; i++)
+	for (i = 0; i < size; i++)
 		temp[i] = array[i];
 
 	top_down(array, temp, 0, size);
@@ -60,7 +61,7 @@ void top_down(int *temp, int *array, size_t start, size_t end)
 **/
 void merge(int *array, int *temp, size_t start, size_t end, size_t middle)
 {
-	size_t i = start, j = middle;
+	size_t i = start, j = middle, k;
 
 	printf("Merging...\n");
 	printf("[left]: ");
@@ -68,7 +69,7 @@ void merge(int *array, int *temp, size_t start, size_t end, size_t middle)
 	printf("[right]: ");
 	print_array(array + middle, end - middle);
 
-	for (size_t k = start; k < end; k++)
+	for (k = start; k < end; k++)
 	{
 		if (i < middle && (j >= end || array[i] <= array[j]))
 		{
