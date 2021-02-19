@@ -22,7 +22,7 @@ void merge_sort(int *array, size_t size)
 	for (i = 0; i < size; i++)
 		temp[i] = array[i];
 
-	top_down(array, temp, 0, size);
+	top_down(temp, array, 0, size);
 
 	free(temp);
 }
