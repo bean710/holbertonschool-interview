@@ -34,4 +34,3 @@ def island_perimeter(grid):
             tot_perim += perim
 
     return tot_perim
-
