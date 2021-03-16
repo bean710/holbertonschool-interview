@@ -3,6 +3,7 @@
 
 
 def island_perimeter(grid):
+    """Calculates the perimeter of an island"""
     tot_perim = 0
 
     height = len(grid)
