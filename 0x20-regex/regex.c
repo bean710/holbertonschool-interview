@@ -12,14 +12,24 @@
 **/
 int regex_match(char const *str, char const *pattern)
 {
-	regex_bit_t *reg_comp;
+	regex_bit_t *reg_comp, *temp;
+	bool res;
 
 	if (!str || !pattern || !(*str) || !(*pattern))
 		return (1);
 
 	reg_comp = regex_compile(pattern);
 
-	return (regex_recurse(str, reg_comp));
+	res = regex_recurse(str, reg_comp);
+
+	while (reg_comp)
+	{
+		temp = reg_comp->next;
+		free(reg_comp);
+		reg_comp = temp;
+	}
+
+	return (res);
 }
 
 /**
