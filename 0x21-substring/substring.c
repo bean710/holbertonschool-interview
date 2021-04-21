@@ -109,6 +109,5 @@ int *find_substring(char const *s, char const **words, int nb_words, int *n)
 		words_used = 0;
 	}
 
-	printf("%d\n", *n);
 	return (array);
 }
