@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """Figures out who wins the prime game"""
-from functools import reduce
-from functools import lru_cache
 
 
 def isWinner(x, nums):
@@ -26,7 +24,6 @@ def winsRound(nums):
     return primesCount % 2
 
 
-@lru_cache
 def isPrime(num):
     """Checks if a number is prime"""
     if (num <= 1):
