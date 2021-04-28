@@ -7,7 +7,7 @@ def isWinner(x, nums):
     mariaWins = 0
 
     for num in nums:
-        mariaWins += winsRound(range(1, num))
+        mariaWins += winsRound(range(1, num + 1))
 
     if (mariaWins > x / 2):
         return "Maria"
